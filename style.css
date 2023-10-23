@@ -1,3 +1,4 @@
+/* !base-start */
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,600&display=swap');
 *{
     margin: 0;
@@ -20,10 +21,35 @@ a{
 h1,h2,h3,h4,h5,h6,p{
     margin: 0; 
 }
+/* !base and */
+.container{
+    /* background-color: red; */
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
 
 /* !Header start */
 
 .global-notification{
     background-color: #136ef1;
-    padding: 14px;
+    padding: 14px  0;
+    text-align: center;
+    color: white;
 }
+.global-notification a{
+    color: white;
+    font-weight: 600;
+}
+
+header{
+    border-bottom: 1px solid #dee0ea; 
+    /* Header alt çizgi oluşturuldu. */
+
+}
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* !Header start */
