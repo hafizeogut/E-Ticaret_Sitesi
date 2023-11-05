@@ -1,2 +1,2 @@
 # E-Ticaret_Sitesi
-Html,Css,JavaScript harmanlanarak oluşturulan bir e ticaret web projesidir.
+Html,Css,JavaScript,Bootstrap harmanlanarak oluşturulan bir e ticaret web projesidir.
