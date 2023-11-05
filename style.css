@@ -30,19 +30,86 @@ p {
   margin: 0;
 }
 
-/* !base and */
+
 .container {
   /* background-color: red; */
   max-width: 1200px;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 25px;
+  line-height: 40px;
 }
 
+.logo{
+  font-size: 24px;
+  font-weight: 500;
+  display: flex ;
+}
+button{
+  
+  /*padding:0 25px ;*//* sağdan soldan 25px*/
+  cursor: pointer;/*tıklanabilir özellik*/
+  border: none;
+}
+
+.btn{
+  
+  display: inline-block;
+  padding: 0 25px;/* sağdan soldan 25px*/
+  border: 1px solid black; 
+  line-height: 40px;
+  font-weight: 500;
+  transition: .2s ease all;
+}
+
+
+
+.btn-sm{/*  Küöük butonlar için*/
+  line-height: 33px;
+}
+
+
+.btn-lg{
+  line-height: 45px;
+}
+
+.btn-primary{
+  background-color: #1367ef;
+  color:#fff;
+  border-color: #1367ef;
+}
+
+.btn-primary:hover{/*tıklandığında*/
+  background-color: #fff;
+  color:#1367ef; 
+}
+
+input[type = "text"],
+input[type = "password"],
+input[type = "email"],
+input[type = "number"]
+{ 
+  outline: none;/*textbox tıklandığında kenarlığı yok et*/
+  border: 1px solid #dee0ea;
+  padding: 8px 8px 8px 15px;
+}
+
+input[type = "text"]:focus,
+input[type = "password"]:focus,
+input[type = "email"]:focus,
+input[type = "number"]:focus
+{ 
+  border-color: gray;
+}
+
+input[type = "number"]::-webkit-inner-spin-button{
+  opacity: 1;
+}
+/* !base and */
 /* !Header start */
 header {
   border-bottom: 1px solid #dee0ea;
   /* Header alt çizgi oluşturuldu. */
-  position: relative;
+  position: relative; 
 }
 
 .global-notification {
@@ -250,3 +317,167 @@ header .menu-dropdown-content a:hover{
 
 /* ? menu dropdown end */
 /* !Header end */
+
+
+/* !modal search start */
+.modal-search{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content:center;/*yatayda ortala*/
+  align-items: center;/*dikeyde ortala*/
+
+}
+.modal-search::after{
+  content:"";
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  height: 100%;
+  position:fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+
+}
+.modal-wrapper{
+  max-width: 800px;
+  width: 100%;
+  background-color: #fff;
+  position: fixed;/*sayfa ilerlediği sürece ekranda ilerle*/
+  z-index: 10;
+  padding: 30px;
+  
+
+}
+ 
+
+
+.modal-search .modal-title{
+  font-size: 30px;
+  font-weight: 600;
+
+}
+
+.modal-search .modal-text{
+  font-size: 15px; 
+  color: #7a7a7a;
+  padding-bottom:18px;
+  border-bottom: 1px solid #dee0ea;
+
+}
+
+.modal-search .search-form{
+  margin-top: 15px; 
+  display: flex;
+  position: relative;
+
+}
+
+.modal-search .search-form::after{
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #dee0ea;
+  position: absolute;
+  bottom: -15px;
+}
+
+.modal-search .search-form input{ 
+  width:100% ;
+  max-height: 42px;
+  border-color: #dee0ea !important;
+}
+
+.modal-search .search-form button{ 
+  position: absolute;
+  right: 0;
+  height: 100%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color:1px solid #dee0ea ;
+}
+
+.modal-search .search-form button i{ 
+  font-size: 18px;
+  color: #7a7a7a;
+}
+
+.modal-search .search-results{
+  margin-top: 30px;
+
+}
+.modal-search .search-heading{ 
+  padding: 15px;
+  background-color: #f9f9f9;
+  border: 1px solid #dee0ea;
+
+}
+
+.modal-search .search-heading h3{ 
+  font-size: 16px;
+  font-weight: 600;
+
+}
+
+.modal-search .results{ 
+  display: grid;
+  grid-template-columns:1fr 1fr;
+  border: 1px solid #dee0ea;
+
+}
+
+.modal-search .results .result-item{ 
+  display: flex;
+  column-gap: 15px;
+  align-items: center;
+  padding: 15px;
+  border-bottom:1px solid #dedede;
+  border-right: 1px solid #dee0ea; 
+  position: relative;
+  transition: background-color .2s eae;
+}
+
+.modal-search .results .result-item:hover{ /*üzerine tıklandığında*/
+  background-color: #f9f9f9;
+}
+
+
+.modal-search .results .search-thumb{
+  max-width: 65px;
+  width: 100%;
+
+}
+
+.modal-search .results .search-info{
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+
+}
+.modal-search .results .search-sku{
+  color: #7a7a7a;
+  margin: 2px 0;
+
+}
+
+.modal-search .results .search-price{
+  font-weight: 600;
+  color: #dc3545;
+
+}
+
+.modal-search  .bi-x-circle{ 
+  position: absolute;/*serbest bırak*/
+  top: 5px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+
+}
+/* !modal search end */
